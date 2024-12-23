@@ -1,1 +1,2 @@
-web: gunicorn api:app --bind 0.0.0.0:8080
+web: flask --app app:app run --host=0.0.0.0 --port=$PORT
+worker: celery -A worker.celery worker --pool=solo -l info
