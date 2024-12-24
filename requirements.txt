@@ -15,6 +15,7 @@ pandas==2.2.3
 python-dateutil==2.9.0.post0
 requests==2.32.3
 idna==3.4  # Added idna to explicitly install the encoding package
+gevent==24.11.1
 
 # Optional: Logging and JSON utilities
 python-json-logger==2.0.7
