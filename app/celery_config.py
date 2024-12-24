@@ -6,7 +6,7 @@ def make_celery(app):
         backend=app.config['CELERY_RESULT_BACKEND'],
         broker=app.config['CELERY_BROKER_URL']
     )
-    
+    celery.conf.result_expires = 1800
     celery.conf.update(
         broker_connection_retry_on_startup=True
     )
